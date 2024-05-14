@@ -1,0 +1,30 @@
+.pay-container {
+    hr {
+        background-color: var(--black);
+    }
+
+    .pay-total {
+        display: flex;
+        align-items: center;
+        color: var(--black);
+    }
+
+    .pay-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            padding: 1.5rem;
+            font-size: 1.3rem;
+            color: var(--white);
+            border-radius: 1.2rem;
+            border: 1px solid var(--white);
+            background-color: #007bff;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+}

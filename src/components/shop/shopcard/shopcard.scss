@@ -12,6 +12,7 @@
     }
 
     button {
+        justify-content: end;
         margin-top: 10px;
         background-color: #007bff;
         color: #fff;
@@ -23,5 +24,17 @@
     }
     button:hover {
         background-color: #0056b3;
+    }
+}
+
+@media (max-width: 768px) {
+    .itemCard{
+        width: 10rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .itemCard{
+        width: 8rem;
     }
 }

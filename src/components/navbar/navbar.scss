@@ -21,6 +21,10 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        ul:last-child {
+            justify-content: flex-end;
+        }
     }
 
     li {            

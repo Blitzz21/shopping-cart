@@ -1,3 +1,8 @@
+/**
+ * export Product images
+ * @description to also make exporting easier by surrounding them with {} then enter the name
+ */
+
 export { default as Product1 } from './Product1.png';
 export { default as Product2 } from './Product2.png'
 export { default as Product3 } from './Product3.png'

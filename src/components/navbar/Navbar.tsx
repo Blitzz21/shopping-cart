@@ -1,6 +1,26 @@
+  /**
+   * imports the stylesheet
+   * imports the 'Checkout' component
+ */
 import './navbar.scss'
+import Checkout from './checkout/checkout';
+
+/**
+ * a component named 'Navbar'
+ * @description this displays the navbar and the sidebar
+ * returns the JSX elements
+ */
 
 function Navbar ()  {
+
+
+/**
+ * a function  name showSideBar that returns no value or void
+ * @description this fucntion is made to show the sidebar when the user clicks the cart-button
+ * a const named sidebar to assign the document.querySelector('.sidebar), and the declared it's type as an HTMLElement or null
+ * if the sidebar with a class of sidebar is found
+ * the display style of the class will change to flex to show the sidebar
+ */
   function showSidebar(): void {
     const sidebar: HTMLElement | null = document.querySelector('.sidebar');
     if (sidebar) {
@@ -8,6 +28,14 @@ function Navbar ()  {
     }
   }
   
+
+/**
+ * a function  name hideSideBar that returns no value or void
+ * @description this fucntion is made to hide the sidebar when the user clicks the X button
+ * a const named sidebar to assign the document.querySelector('.sidebar), and the declared it's type as an HTMLElement or null
+ * if the sidebar with a class of sidebar is found
+ * the display style of the class will change to none to show the sidebar
+ */
   function hideSidebar(): void {
     const sidebar: HTMLElement | null = document.querySelector('.sidebar');
     if (sidebar) {
@@ -20,7 +48,7 @@ function Navbar ()  {
     <nav>
       <ul className='sidebar'>
         <li onClick={hideSidebar}><a>Close</a></li>
-        <li></li>
+        <li><Checkout/></li>
       </ul>
 
       <ul className='navbar'>
