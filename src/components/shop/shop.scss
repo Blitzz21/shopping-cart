@@ -1,0 +1,18 @@
+.Shop__Main {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.Shop__Grid {
+    height: 100vh;
+    position: relative;
+    margin-top: 8rem;
+
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
