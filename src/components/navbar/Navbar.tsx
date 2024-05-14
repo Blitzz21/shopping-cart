@@ -1,5 +1,4 @@
 import './navbar.scss'
-import cartItems from './cart-items/cart-items';
 
 function Navbar ()  {
   function showSidebar(): void {
