@@ -70,6 +70,7 @@ const payPalClientId = "Aa4HHwPu06PJSvxkfOUssvPtueg22Ycg5_ASo9lS9Lwjl3J9KEeemzr4
  */
 const createOrder = (data: any,actions: any): Promise<string> => {
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.itemQuantity, 0);
+  console.log('createOrder data:', data);
 
 /**
  * for error handling
@@ -114,6 +115,7 @@ const createOrder = (data: any,actions: any): Promise<string> => {
  * if the capture is completed the cartItems and the cartQuantity will be reset
  */
 const onApprove = (data: any, actions: any) => {
+  console.log('onApprove data:', data);
   return actions.order.capture().then((details: any) => {
     const captureData = details.purchase_units[0].payments.captures[0];
     console.log(`Transaction ${captureData.status}: ${captureData.id}`);
