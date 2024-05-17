@@ -68,7 +68,7 @@ const payPalClientId = "Aa4HHwPu06PJSvxkfOUssvPtueg22Ycg5_ASo9lS9Lwjl3J9KEeemzr4
  * that takes two parameters data and actions with their type set to any
  * adds up the prices of the cartItems array by calculating the total and the item.price and item.itemQuantity, and the initial value is 0
  */
-const createOrder = (actions: any): Promise<string> => {
+const createOrder = (data: any,actions: any): Promise<string> => {
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.itemQuantity, 0);
 
 /**
@@ -113,7 +113,7 @@ const createOrder = (actions: any): Promise<string> => {
  * logs the transaction
  * if the capture is completed the cartItems and the cartQuantity will be reset
  */
-const onApprove = (actions: any) => {
+const onApprove = (data: any, actions: any) => {
   return actions.order.capture().then((details: any) => {
     const captureData = details.purchase_units[0].payments.captures[0];
     console.log(`Transaction ${captureData.status}: ${captureData.id}`);
