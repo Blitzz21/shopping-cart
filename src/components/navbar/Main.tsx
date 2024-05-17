@@ -10,7 +10,7 @@
  */
 import './main.scss';
 import './checkout.scss'
-import { Product1, Product2, Product3, Product4, Product5, Product6, Product7, Product8 } from '../product_img';
+import { Product1, Product2, Product3, Product4, Product5, Product6, Product7, Product8 } from '../shop/product_img';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import { decreaseCartQuantity, increaseCartQuantity, resetCartQuantity } from '../redux/cartQuantitySlice';
