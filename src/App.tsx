@@ -1,7 +1,7 @@
 /**
   * imports the following the components from the './src/components/index.ts' file
  */
-import { Navbar, Shop } from './components';
+import { Main } from './components';
 
 
 /**
@@ -12,8 +12,7 @@ import { Navbar, Shop } from './components';
 function App() {
   return (
     <>
-      <Navbar />
-      <Shop />
+      <Main />
     </>
   )
 }

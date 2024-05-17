@@ -43,6 +43,7 @@ nav {
 
 
             &:hover {
+                cursor: pointer;
                 background-color: var(--black);
                 color: var(--white);
             }    
@@ -69,15 +70,21 @@ nav {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
 
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 
-
         li {
             width: 100%;
+        }
+
+        li:last-child {
+            bottom: 0;
+            margin-top: auto;
+            padding: 1rem;
         }
 
         a {
@@ -89,16 +96,112 @@ nav {
                 background-color: var(--white);
         }
     }
-
 }
+
+.Cart-Item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid var(--black);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 100vh;
+
+    color: var(--black);
+
+    img {
+        aspect-ratio: 4/3;
+        width: 30%;
+        padding: 0;
+    }
+}
+
+.Shop__Main {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.Shop__Grid {
+    height: 100vh;
+    position: relative;
+    margin-top: 2rem;
+
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat (8, 1fr);
+}
+
+
+.itemCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 16rem;
+  
+    img {
+        aspect-ratio: 4/3;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        justify-content: end;
+        margin-top: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 1.1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+}
+
+
+@media (max-width: 1280px) {
+    .Shop__Grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .cart-button {
         display: block;
+    }
+
+    .itemCard{
+        width: 10rem;
+    }
+
+    .Shop__Grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 400px) {
     .sidebar {
         width: 100%;
+    }
+
+    .itemCard{
+        width: 8rem;
+    }
+
+    .Shop__Main {
+        margin-top: 0;
+        margin-right: 2rem;
+    }
+    
+    .Shop__Grid {
+        grid-template-columns: 1fr;
     }
 }

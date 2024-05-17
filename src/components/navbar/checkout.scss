@@ -1,4 +1,8 @@
 .pay-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     hr {
         background-color: var(--black);
     }
